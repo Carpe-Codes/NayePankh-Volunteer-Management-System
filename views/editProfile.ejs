@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+
+    <form
+        action="/update-profile"
+        method="POST"
+        >
+
+        <input
+            type="text"
+            name="name"
+            value="<%= user.name %>"
+        >
+
+        <br><br>
+
+        <input
+            type="text"
+            name="phone"
+            value="<%= user.phone %>"
+        >
+
+         <br><br>
+
+        <input
+            type="text"
+            name="college"
+            value="<%= user.college %>"
+        >
+
+        <br><br>
+
+        <input
+            type="text"
+            name="skills"
+            value="<%= user.skills %>"
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Update
+        </button>
+
+    </form>
+</body>
+</html>

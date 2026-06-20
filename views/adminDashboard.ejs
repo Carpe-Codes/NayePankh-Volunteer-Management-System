@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1> Admin Dashboard </h1>
+
+    <h3>
+        Total Volunteers:
+        <%= volunteers.length %>
+    </h3>
+
+    <a href="/logout" style="font-size: 1.5rem;"> Logout </a>
+
+    <hr>
+    <% volunteers.forEach(volunteer => { %>
+
+    <div>
+
+    <p>
+    Name:
+    <%= volunteer.name %>
+    </p>
+
+    <p>
+    Email:
+    <%= volunteer.email %>
+    </p>
+
+    <p>
+    College:
+    <%= volunteer.college %>
+    </p>
+
+    <p>
+    Skills:
+    <%= volunteer.skills %>
+    </p>
+
+    <a
+        href="/admin/delete/<%= volunteer._id %>"
+        onclick="return confirm('Delete Volunteer?')"
+    >
+    Delete
+    </a>
+
+    <hr>
+
+    </div>
+
+    <% }) %>
+   
+</body>
+</html>

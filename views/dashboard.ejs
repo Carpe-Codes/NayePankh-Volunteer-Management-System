@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+</head>
+<body>
+    <h1>
+        Welcome <%= user.name %>!
+    </h1>
+
+    <hr>
+
+    <p>
+        <strong>Email:</strong>
+        <%= user.email %>
+    </p>
+
+    <p>
+        <strong>Phone:</strong>
+        <%= user.phone %>
+    </p>
+
+    <p>
+        <strong>College:</strong>
+        <%= user.college %>
+    </p>
+
+    <p>
+        <strong>Skills:</strong>
+        <%= user.skills %>
+    </p>
+
+    <p>
+        <strong>Role:</strong>
+        <%= user.role %>
+    </p>
+
+    <br>
+
+    <a href="/edit-profile">
+        Edit Profile
+    </a>
+
+    <br><br>
+
+    <a href="/logout">
+        Logout
+    </a>
+
+</body>
+</html>
